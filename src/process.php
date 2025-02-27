@@ -6,7 +6,7 @@ $d = $_GET['d'];
 $e = $_GET['e'];
 
 $output = [];
-$result =0;
+$result = 0;
 exec("python3 data_management.py $a $b $c $d $e", $output, $result);
 
 if($result !== 0) {
@@ -24,6 +24,13 @@ if($result !== 0) {
     <title>Assignment#6 Process | IST105</title>
   </head>
   <body>
+    <section>
+      <h2>Inputs:</h2>
+      <p>A: <?= $a ?></p>
+      <p>B: <?= $b ?></p>
+      <p>C: <?= $c ?></p>
+      <p>D: <?= $d ?></p>
+      <p>E: <?= $e ?></p>
     <h2>Results:</h2>
     <?php foreach($output as $key=>$value): ?>
       <?= $value ?>

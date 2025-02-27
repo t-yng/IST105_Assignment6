@@ -46,12 +46,13 @@ print(f"<p>Is the average greater than 50?: {average > 50}</p>")
 print("<h3>Even or Odd</h3>")
 for number in numbers:
     if check_even_by_bitwise(number["value"]):
-        print(f"<p>{number['name']}: The {number['value']} is even.</p>")
+        print(f"<p>{number['name']}: {number['value']} is even.</p>")
     else:
-        print(f"<p>{number['name']}: The {number['value']} is even.</p>")
+        print(f"<p>{number['name']}: {number['value']} is odd.</p>")
 
 print("<h3>Value List greater than 10</h3>")
 original_values = list(filter(lambda x: x > 10, [a, b, c, d, e]))
 sorted_values = sorted(original_values)
 print(f"<p>Original Values: {original_values}</p>")
 print(f"<p>Sorted Values: {sorted_values}</p>")
+exit(0)
